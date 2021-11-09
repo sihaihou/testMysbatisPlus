@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Title</title>
+</head>
+<body style="text-align: center">
+	<h4>[[#{login.title}]]</h4>
+	<form>
+		[[#{login.username}]]：<input type="text" /><br>
+		[[#{login.password}]]：<input type="password" /><br>
+		<button type="submit">[[#{login.submit}]]</button>
+	</form>
+	<!-- 请求带上语言的相关参数 -->
+	<a th:href="@{/login(language='zh_CN')}">中文</a>
+	<a th:href="@{/login(language='en_US')}">English</a>
+</body>
+</html>
